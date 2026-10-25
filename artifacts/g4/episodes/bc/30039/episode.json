@@ -1,0 +1,45 @@
+{
+  "team_success": false,
+  "per_robot_success": [
+    false,
+    false,
+    false
+  ],
+  "finish_times_s": [
+    null,
+    null,
+    null
+  ],
+  "simulated_time_s": 5.8,
+  "steps": 58,
+  "collision": {
+    "type": "peer",
+    "robots": [
+      1,
+      2
+    ],
+    "simulated_time_s": 5.799999999999921
+  },
+  "timeout": false,
+  "deadlock_observed": false,
+  "path_length_m": [
+    4.609479586482051,
+    4.369117119908332,
+    4.516454373598103
+  ],
+  "makespan_s": null,
+  "capped_completion_s": 60.0,
+  "method": "behavior_cloning_with_arrival_stop",
+  "seed": 30039,
+  "course": "crossing",
+  "wall_time_s": 0.30931319994851947,
+  "controller_mean_ms": 0.6250051725334648,
+  "controller_p95_ms": 1.0933049896266311,
+  "source_sha256": "c7d5b3a070720c2682aba3cdc46e8004e6f0a61ea6721f52e021e9342e3a36a9",
+  "scene_sha256": "1b6e9da64e27103c4af80f72ad4eabc2556b07ed2464be9754f3b70fbd2a214a",
+  "config_sha256": "5370d5a9d439f4bc0beec12332013c548bd782082801c8db0b1779c34c13d7e5",
+  "trajectory_sha256": "bc2607abcb350dff073174dfe421e6bf4412bc7741d987d412a3ec7597a8a903",
+  "python": "3.13.5",
+  "numpy": "2.2.6",
+  "checkpoint_sha256": "6709d826a4e747b22e80083f3e97853ea4edad12cbb037891afa0a65dcbb3702"
+}

@@ -1,0 +1,37 @@
+{
+  "team_success": false,
+  "per_robot_success": [
+    false,
+    true,
+    false
+  ],
+  "finish_times_s": [
+    null,
+    11.0,
+    null
+  ],
+  "simulated_time_s": 60.0,
+  "steps": 600,
+  "collision": null,
+  "timeout": true,
+  "deadlock_observed": true,
+  "path_length_m": [
+    1.226823767022428,
+    8.104011076368739,
+    1.2933511964997284
+  ],
+  "makespan_s": null,
+  "capped_completion_s": 60.0,
+  "method": "classical",
+  "seed": 30029,
+  "course": "slalom",
+  "wall_time_s": 6.127246299991384,
+  "controller_mean_ms": 2.111050497430066,
+  "controller_p95_ms": 2.9331149708013964,
+  "source_sha256": "0b0522aae66c60efab477d6cdc9062111b6c379b9bea726d0967b12054216a31",
+  "scene_sha256": "e74527ac8d35a56f5974181fa4dae2c506c54f0c3cf85f3d15f774327be3e3ce",
+  "config_sha256": "5370d5a9d439f4bc0beec12332013c548bd782082801c8db0b1779c34c13d7e5",
+  "trajectory_sha256": "a06e27a3251a54304470e935be2b13ed2f2e31e9a72bd369eab4c699ef9900fb",
+  "python": "3.13.5",
+  "numpy": "2.2.6"
+}

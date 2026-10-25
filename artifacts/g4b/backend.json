@@ -1,0 +1,13 @@
+{
+  "engine": "pybullet 3.2.7 DIRECT",
+  "gravity": 0,
+  "robot_mass_kg": 1,
+  "body": "radius .2m cylinder, height .24m",
+  "drive": "ideal body-frame velocity servo, decorative wheels, no wheel/friction model",
+  "sensors": "analytic planar geometry from measured Bullet poses; cylinder/box footprints match world",
+  "tie_rule": "finish times within 0.1s share rank; robot ID orders display",
+  "control_dt_s": 0.1,
+  "physics_dt_s": 0.01,
+  "source_sha256": "c7d5b3a070720c2682aba3cdc46e8004e6f0a61ea6721f52e021e9342e3a36a9",
+  "tolerance_m": 1e-06
+}

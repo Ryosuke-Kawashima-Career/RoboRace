@@ -1,0 +1,35 @@
+{
+  "team_success": true,
+  "per_robot_success": [
+    true,
+    true,
+    true
+  ],
+  "finish_times_s": [
+    15.7,
+    15.8,
+    15.9
+  ],
+  "simulated_time_s": 15.9,
+  "steps": 159,
+  "collision": null,
+  "timeout": false,
+  "deadlock_observed": false,
+  "path_length_m": [
+    7.779973608255392,
+    7.860018163919443,
+    7.922822672128686
+  ],
+  "makespan_s": 15.9,
+  "capped_completion_s": 15.9,
+  "method": "ppo",
+  "checkpoint_sha256": "de0978cceeefd606e54add551ec42ced8751166a2b864357796036ac86f941e2",
+  "mean_inference_ms": 3.8516792401366824,
+  "backend": "pybullet-3d",
+  "seed": 41000,
+  "ranks": [
+    1,
+    1,
+    2
+  ]
+}

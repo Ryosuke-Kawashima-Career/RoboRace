@@ -1,0 +1,190 @@
+{
+  "methods": {
+    "classical": {
+      "episodes": 40,
+      "successes": 12,
+      "collisions": 0,
+      "timeouts": 28,
+      "capped_completion_s": 45.195,
+      "successful_makespan_s": 10.649999999999999,
+      "per_robot_arrivals": 55,
+      "robot_attempts": 120,
+      "mean_inference_ms": 3.5747728637645637,
+      "courses": {
+        "open": {
+          "episodes": 10,
+          "successes": 10,
+          "collisions": 0,
+          "timeouts": 0,
+          "capped_completion_s": 10.37,
+          "successful_makespan_s": 10.37,
+          "per_robot_arrivals": 30,
+          "robot_attempts": 30,
+          "mean_inference_ms": 3.4389727041976683
+        },
+        "slalom": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 0,
+          "timeouts": 10,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 9,
+          "robot_attempts": 30,
+          "mean_inference_ms": 2.7483499330895333
+        },
+        "bottleneck": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 0,
+          "timeouts": 10,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 10,
+          "robot_attempts": 30,
+          "mean_inference_ms": 2.4799481189111248
+        },
+        "crossing": {
+          "episodes": 10,
+          "successes": 2,
+          "collisions": 0,
+          "timeouts": 8,
+          "capped_completion_s": 50.410000000000004,
+          "successful_makespan_s": 12.05,
+          "per_robot_arrivals": 6,
+          "robot_attempts": 30,
+          "mean_inference_ms": 5.631820698859928
+        }
+      }
+    },
+    "bc": {
+      "episodes": 40,
+      "successes": 10,
+      "collisions": 30,
+      "timeouts": 0,
+      "capped_completion_s": 48.260000000000005,
+      "successful_makespan_s": 13.040000000000001,
+      "per_robot_arrivals": 33,
+      "robot_attempts": 120,
+      "mean_inference_ms": 6.639855546149471,
+      "courses": {
+        "open": {
+          "episodes": 10,
+          "successes": 10,
+          "collisions": 0,
+          "timeouts": 0,
+          "capped_completion_s": 13.040000000000001,
+          "successful_makespan_s": 13.040000000000001,
+          "per_robot_arrivals": 30,
+          "robot_attempts": 30,
+          "mean_inference_ms": 18.94362692998753
+        },
+        "slalom": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 10,
+          "timeouts": 0,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 3,
+          "robot_attempts": 30,
+          "mean_inference_ms": 2.512156118569104
+        },
+        "bottleneck": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 10,
+          "timeouts": 0,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 0,
+          "robot_attempts": 30,
+          "mean_inference_ms": 4.030227731670746
+        },
+        "crossing": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 10,
+          "timeouts": 0,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 0,
+          "robot_attempts": 30,
+          "mean_inference_ms": 1.0734114043705019
+        }
+      }
+    },
+    "ppo": {
+      "episodes": 40,
+      "successes": 20,
+      "collisions": 20,
+      "timeouts": 0,
+      "capped_completion_s": 38.2125,
+      "successful_makespan_s": 16.425,
+      "per_robot_arrivals": 60,
+      "robot_attempts": 120,
+      "mean_inference_ms": 1.2880846125231735,
+      "courses": {
+        "open": {
+          "episodes": 10,
+          "successes": 10,
+          "collisions": 0,
+          "timeouts": 0,
+          "capped_completion_s": 16.29,
+          "successful_makespan_s": 16.29,
+          "per_robot_arrivals": 30,
+          "robot_attempts": 30,
+          "mean_inference_ms": 1.2959369631451492
+        },
+        "slalom": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 10,
+          "timeouts": 0,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 0,
+          "robot_attempts": 30,
+          "mean_inference_ms": 1.4725965661715008
+        },
+        "bottleneck": {
+          "episodes": 10,
+          "successes": 0,
+          "collisions": 10,
+          "timeouts": 0,
+          "capped_completion_s": 60.0,
+          "successful_makespan_s": null,
+          "per_robot_arrivals": 0,
+          "robot_attempts": 30,
+          "mean_inference_ms": 1.1748696314386264
+        },
+        "crossing": {
+          "episodes": 10,
+          "successes": 10,
+          "collisions": 0,
+          "timeouts": 0,
+          "capped_completion_s": 16.56,
+          "successful_makespan_s": 16.56,
+          "per_robot_arrivals": 30,
+          "robot_attempts": 30,
+          "mean_inference_ms": 1.208935289337417
+        }
+      }
+    }
+  },
+  "paired_success_difference_95_percentile_intervals": {
+    "classical minus bc": [
+      0.0,
+      0.125
+    ],
+    "classical minus ppo": [
+      -0.325,
+      -0.075
+    ],
+    "bc minus ppo": [
+      -0.4,
+      -0.125
+    ]
+  },
+  "limitation": "One training seed; scenario bootstrap does not measure training variability. No additional training or tuning."
+}

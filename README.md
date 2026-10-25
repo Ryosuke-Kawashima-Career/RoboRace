@@ -128,3 +128,7 @@ million-step ceiling. Every 32 updates, four validation layouts select the check
 All failures are retained; this pilot does not establish superiority or reliability.
 Do not regenerate scenario splits or tune against the test manifest. Full multi-seed
 training and frozen held-out comparison remain G4 work.
+
+## 3D comparison demo (G4/G4b)
+
+Run `.venv\Scripts\python.exe -m roborace.g4 compare` for the preliminary 40-layout paired comparison, and `.venv\Scripts\python.exe -m roborace.g4 demo` for checkpoint-controlled PyBullet races and synchronized comparison video. Install `requirements-3d.txt` first. Videos and logs: `artifacts/g4b/`; held-out results: `artifacts/g4/`. See [implementation, results and limitations](dev/plans/40_g4_report.md). The demo uses ideal velocity-servo bodies with decorative wheels. Full multi-seed comparison and G5 submission packaging remain incomplete.

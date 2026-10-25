@@ -93,14 +93,13 @@ class World:
         for _ in range(self.cfg['physics_substeps']):
             old = self.state.copy()
             new = old.copy()
-            # Midpoint integration; collisions cover each straight substep chord.
-            heading = old[:, 2] + actions[:, 1] * dt / 2
-            new[:, :2] += actions[:, :1] * np.column_stack((np.cos(heading), np.sin(heading))) * dt
-            new[:, 2] = (old[:, 2] + actions[:, 1] * dt + np.pi) % (2 * np.pi) - np.pi
-            self.contact = collision(old, new, self.scene, self.cfg['robot_radius_m'], self.cfg['contact_tolerance_m'])
+            new, self.contact = self.advance(old, actions, dt)
             self.time += dt
             if self.contact:
-                # Conservative response: retain last collision-free state; end episode.
+                # 2D conservatively retains the safe pose; physics backends retain measured contact poses.
+                if getattr(self, "collision_retains_actual_pose", False):
+                    self.path_length += np.linalg.norm(new[:, :2] - old[:, :2], axis=1)
+                    self.state = new
                 self.terminated = True
                 self.velocity[:] = 0
                 self.contact['simulated_time_s'] = self.time
@@ -128,6 +127,14 @@ class World:
         if self.contact:
             reward -= 10
         return self.observe(), reward.astype(np.float32), self.terminated, self.truncated, self.summary()
+
+    def advance(self, old, actions, dt):
+        """Backend integration hook; returns actual pose and first contact."""
+        new = old.copy()
+        heading = old[:, 2] + actions[:, 1] * dt / 2
+        new[:, :2] += actions[:, :1] * np.column_stack((np.cos(heading), np.sin(heading))) * dt
+        new[:, 2] = (old[:, 2] + actions[:, 1] * dt + np.pi) % (2 * np.pi) - np.pi
+        return new, collision(old, new, self.scene, self.cfg['robot_radius_m'], self.cfg['contact_tolerance_m'])
 
     def summary(self):
         success = bool(self.finished.all() and not self.contact)

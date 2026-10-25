@@ -1,0 +1,10 @@
+{
+  "raw_frame_counts": {
+    "classical": 103,
+    "bc": 105,
+    "ppo": 160
+  },
+  "fps": 10,
+  "comparison": "synchronized 1x, terminal panels held and labeled",
+  "frames_decoded": "all raw frames decoded to build comparison"
+}
