@@ -1,0 +1,105 @@
+{
+  "scope": "same eight validation scenarios; includes checkpoint-selection layouts; not held-out G4 evidence",
+  "methods": {
+    "classical": {
+      "episodes": 8,
+      "successes": 3,
+      "collision_episodes": 0,
+      "timeouts": 5,
+      "mean_capped_s": 41.625,
+      "courses": {
+        "open": {
+          "successes": 2,
+          "episodes": 2
+        },
+        "slalom": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "bottleneck": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "crossing": {
+          "successes": 1,
+          "episodes": 2
+        }
+      }
+    },
+    "behavior_cloning": {
+      "episodes": 8,
+      "successes": 2,
+      "collision_episodes": 6,
+      "timeouts": 0,
+      "mean_capped_s": 47.925,
+      "courses": {
+        "open": {
+          "successes": 2,
+          "episodes": 2
+        },
+        "slalom": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "bottleneck": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "crossing": {
+          "successes": 0,
+          "episodes": 2
+        }
+      }
+    },
+    "ppo_initial_untrained": {
+      "episodes": 8,
+      "successes": 2,
+      "collision_episodes": 6,
+      "timeouts": 0,
+      "mean_capped_s": 49.075,
+      "courses": {
+        "open": {
+          "successes": 2,
+          "episodes": 2
+        },
+        "slalom": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "bottleneck": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "crossing": {
+          "successes": 0,
+          "episodes": 2
+        }
+      }
+    },
+    "ppo_selected_trained": {
+      "episodes": 8,
+      "successes": 4,
+      "collision_episodes": 4,
+      "timeouts": 0,
+      "mean_capped_s": 38.125,
+      "courses": {
+        "open": {
+          "successes": 2,
+          "episodes": 2
+        },
+        "slalom": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "bottleneck": {
+          "successes": 0,
+          "episodes": 2
+        },
+        "crossing": {
+          "successes": 2,
+          "episodes": 2
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+test_box_corner_clearance (test_g1.GeometryTests.test_box_corner_clearance) ... ok
+test_peer_swap_and_wall (test_g1.GeometryTests.test_peer_swap_and_wall) ... ok
+test_rays (test_g1.GeometryTests.test_rays) ... ok
+test_thin_obstacle_tunneling (test_g1.GeometryTests.test_thin_obstacle_tunneling) ... ok
+test_baseline_repeatable_and_observation_only (test_g1.WorldTests.test_baseline_repeatable_and_observation_only) ... ok
+test_collision_before_goal_and_no_overlap (test_g1.WorldTests.test_collision_before_goal_and_no_overlap) ... ok
+test_finished_peer_remains_obstacle (test_g1.WorldTests.test_finished_peer_remains_obstacle) ... ok
+test_goal_dwell_success_and_finished_stop (test_g1.WorldTests.test_goal_dwell_success_and_finished_stop) ... ok
+test_manifest_hash_matches_file_bytes (test_g1.WorldTests.test_manifest_hash_matches_file_bytes) ... ok
+test_scenario_feasibility (test_g1.WorldTests.test_scenario_feasibility) ... ok
+test_seed_observations_and_peers (test_g1.WorldTests.test_seed_observations_and_peers) ... ok
+test_sensor_range_and_peer_body_frame (test_g1.WorldTests.test_sensor_range_and_peer_body_frame) ... ok
+test_simultaneous_update_order (test_g1.WorldTests.test_simultaneous_update_order) ... ok
+test_straight_turn_and_clipping (test_g1.WorldTests.test_straight_turn_and_clipping) ... ok
+test_timeout_deadlock_and_capped_metric (test_g1.WorldTests.test_timeout_deadlock_and_capped_metric) ... ok
+test_checkpoint_reload_and_action_bounds (test_g2.BehaviorCloningTests.test_checkpoint_reload_and_action_bounds) ... ok
+test_learned_weights_determine_non_arrival_actions (test_g2.BehaviorCloningTests.test_learned_weights_determine_non_arrival_actions) ... ok
+test_missing_peer_mask_is_preserved (test_g2.BehaviorCloningTests.test_missing_peer_mask_is_preserved) ... ok
+test_checkpoint_contract_bounds_and_reload (test_g3.PPOTests.test_checkpoint_contract_bounds_and_reload) ... ok
+test_clipped_objective_both_signs (test_g3.PPOTests.test_clipped_objective_both_signs) ... ok
+test_distribution_log_probs_and_gradient (test_g3.PPOTests.test_distribution_log_probs_and_gradient) ... ok
+test_no_advantage_leak_across_reset (test_g3.PPOTests.test_no_advantage_leak_across_reset) ... ok
+test_terminal_versus_time_limit_bootstrap (test_g3.PPOTests.test_terminal_versus_time_limit_bootstrap) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.410s
+
+OK

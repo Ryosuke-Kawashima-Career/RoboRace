@@ -1,0 +1,28 @@
+{
+  "training": {
+    "selected_actor_change_l2": 3.6592251756623604,
+    "finite_training_metrics": true,
+    "training_seeds_valid": true,
+    "unchanged_manifests": true,
+    "source_snapshot_valid": true,
+    "world_steps": 32768
+  },
+  "demo_crossing": {
+    "checkpoint_action_match": true,
+    "exact_state_replay": true,
+    "team_success": true,
+    "gif_duration_ms": 16500
+  },
+  "demo_open": {
+    "checkpoint_action_match": true,
+    "exact_state_replay": true,
+    "team_success": true,
+    "gif_duration_ms": 16400
+  },
+  "demo_slalom": {
+    "checkpoint_action_match": true,
+    "exact_state_replay": true,
+    "team_success": false,
+    "gif_duration_ms": 2700
+  }
+}

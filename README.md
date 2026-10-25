@@ -1,8 +1,9 @@
 # RoboRace
 
-G1/G2 implementation: deterministic 2D differential-drive robot races, local sensing,
-collision detection, classical and trained behavior-cloning controllers, and reproducible
-recordings. PPO and final submission are later phases. See `dev/plans/README.md`.
+G1–G3 implementation: deterministic 2D differential-drive robot races, local sensing,
+collision detection, classical, behavior-cloning and independent PPO controllers,
+and reproducible recordings. Final comparison/submission remain later phases.
+See `dev/plans/README.md` for measured results and limitations.
 
 ## Run on the verified local environment
 
@@ -87,3 +88,43 @@ as the classical controller is applied explicitly. No classical obstacle-avoidan
 fallback runs during learned inference. Checkpoints store architecture, statistics,
 training configuration and data/environment/source provenance. Default G2 uses one
 training seed; the multi-seed final comparison remains G4 work.
+
+## G3 PPO pilot
+
+Uses the existing CPU PyTorch dependencies in `requirements-learning.txt`; no new
+external RL library is required. The custom implementation has tests for action
+probabilities, clipping, gradients and GAE termination/truncation behavior.
+
+```powershell
+& .\.venv\Scripts\python.exe -m roborace.cli train-ppo --ppo-config configs/ppo.json --output artifacts/g3/ppo_seed0
+& .\.venv\Scripts\python.exe -m roborace.cli evaluate --controller ppo --checkpoint artifacts/g3/ppo_seed0/policy.pt --output artifacts/g3/validation
+& .\.venv\Scripts\python.exe -m roborace.cli demo --controller ppo --checkpoint artifacts/g3/ppo_seed0/policy.pt --course open --seed 20000 --output artifacts/g3/demo_open
+& .\.venv\Scripts\python.exe -m roborace.cli demo --controller ppo --checkpoint artifacts/g3/ppo_seed0/policy.pt --course slalom --seed 20001 --output artifacts/g3/demo_slalom
+& .\.venv\Scripts\python.exe scripts/verify_g3.py
+```
+
+The policy shares actor parameters across robots but each actor and value function
+receives only that robot's 44 local inputs. It trains from scratch on randomly
+shuffled training layouts, with no BC weights or expert actions. This is independent
+PPO with parameter sharing, not MAPPO. Frozen physical input scaling is used without
+fitted observation statistics.
+
+The bounded Beta distribution avoids clipping stochastic actions: sampled unit-space
+coordinates map to speed `[0,1]` and turn `[-2,2]`. PPO ratios use the same unit-space
+density for old/new policies; the constant physical-transform Jacobian cancels.
+Reported entropy is in unit space and may be negative (differential entropy).
+Deterministic inference uses the distribution mean. The explicit 0.27 m arrival stop
+matches BC/classical; masked arrival/finished samples do not train the actor.
+
+True terminal transitions disable value bootstrap; horizon truncation bootstraps the
+final observation, while GAE recursion stops at all resets/robot arrivals. Finished
+robots contribute no subsequent actor/critic samples. Reward coefficients and all
+optimization/selection settings are in `configs/ppo.json`. Checkpoints store model,
+runtime, source, environment, training config and manifest provenance. Last optimizer
+state is saved for inspection; seamless resume/RNG restoration is not implemented.
+
+Default run is a seed-0 pilot capped at 32,768 world steps or 900 seconds, below the
+million-step ceiling. Every 32 updates, four validation layouts select the checkpoint.
+All failures are retained; this pilot does not establish superiority or reliability.
+Do not regenerate scenario splits or tune against the test manifest. Full multi-seed
+training and frozen held-out comparison remain G4 work.

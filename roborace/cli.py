@@ -77,32 +77,40 @@ def rollout(cfg, seed, course, output, recording=False, scene=None, policy=None)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['demo', 'evaluate', 'scenarios', 'collect-bc', 'train-bc'])
+    parser.add_argument('command', choices=['demo', 'evaluate', 'scenarios', 'collect-bc', 'train-bc', 'train-ppo'])
     parser.add_argument('--config', type=Path, default=ROOT / 'configs/g0_contract.json')
     parser.add_argument('--seed', type=int, default=20000)
     parser.add_argument('--course', choices=COURSES, default='open')
     parser.add_argument('--output', type=Path, default=ROOT / 'artifacts/g1')
-    parser.add_argument('--controller', choices=['classical', 'bc'], default='classical')
+    parser.add_argument('--controller', choices=['classical', 'bc', 'ppo'], default='classical')
     parser.add_argument('--checkpoint', type=Path)
     parser.add_argument('--bc-config', type=Path, default=ROOT / 'configs/bc.json')
+    parser.add_argument('--ppo-config', type=Path, default=ROOT / 'configs/ppo.json')
     parser.add_argument('--dataset', type=Path, default=ROOT / 'artifacts/g2/dataset')
     args = parser.parse_args()
     cfg = json.loads(args.config.read_text(encoding='utf-8'))
     policy = None
-    if args.controller == 'bc':
+    if args.controller in ('bc', 'ppo'):
         if args.checkpoint is None:
-            parser.error('--controller bc requires --checkpoint')
+            parser.error('--controller bc/ppo requires --checkpoint')
         import torch
         from .bc import BehaviorCloning
         torch.set_num_threads(cfg['compute_budget']['torch_threads'])
         contract = hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest()
-        policy = BehaviorCloning(args.checkpoint, contract)
+        if args.controller == 'bc':
+            policy = BehaviorCloning(args.checkpoint, contract)
+        else:
+            from .ppo import PPOPolicy
+            policy = PPOPolicy(args.checkpoint, contract)
     if args.command == 'collect-bc':
         from .collect_bc import collect
         collect(args.dataset, json.loads(args.bc_config.read_text()), cfg)
     elif args.command == 'train-bc':
         from .train_bc import train
         train(args.dataset, args.output, json.loads(args.bc_config.read_text()), cfg)
+    elif args.command == 'train-ppo':
+        from .train_ppo import train
+        train(args.output, json.loads(args.ppo_config.read_text()), cfg)
     elif args.command == 'scenarios':
         summary = build_manifests(ROOT / 'scenarios', cfg)
         args.output.mkdir(parents=True, exist_ok=True)
