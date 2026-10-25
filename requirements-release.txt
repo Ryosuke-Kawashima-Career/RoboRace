@@ -1,0 +1,4 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+-r requirements-learning.txt
+-r requirements-3d.txt
+pytest==8.3.4

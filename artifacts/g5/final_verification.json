@@ -1,0 +1,24 @@
+{
+  "archive": {
+    "archive_sha256": "82d3c934577c74ff15bd6f210dc829dea5c7bb755eabad2d4deb436635a34fc4",
+    "files": 885,
+    "bytes": 7260532,
+    "excluded": [
+      "virtual environments",
+      "private docs/dev directories",
+      "course assignment PDF",
+      "Git history"
+    ],
+    "account_id": "83792"
+  },
+  "extracted_hashes_verified": 884,
+  "extracted_tests_passed": 28,
+  "extracted_test_seconds": 4.18,
+  "extracted_ppo_makespan_s": 15.9,
+  "extracted_ppo_contacts": null,
+  "pdf_pages": 4,
+  "video_duration_s": 120,
+  "privacy_checks": "privacy_checks.json",
+  "external_publication": "not performed",
+  "portal_submission": "not performed"
+}

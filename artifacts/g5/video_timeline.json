@@ -1,0 +1,56 @@
+{
+  "fps": 10,
+  "duration_s": 120,
+  "audio": "none; captioned",
+  "speed": "all moving footage 1x; edits/stills/holds labeled",
+  "sections": [
+    {
+      "start_s": 0,
+      "end_s": 12,
+      "label": "01 / Task and purpose",
+      "frames": 120
+    },
+    {
+      "start_s": 12,
+      "end_s": 30,
+      "label": "02 / How AI drives the robots",
+      "frames": 180
+    },
+    {
+      "start_s": 30,
+      "end_s": 46,
+      "label": "03 / Actual learned-controller execution",
+      "frames": 160
+    },
+    {
+      "start_s": 46,
+      "end_s": 56,
+      "label": "04 / 3D integration outcome",
+      "frames": 100
+    },
+    {
+      "start_s": 56,
+      "end_s": 72,
+      "label": "05 / Method comparison in 3D",
+      "frames": 160
+    },
+    {
+      "start_s": 72,
+      "end_s": 90,
+      "label": "06 / Measured performance",
+      "frames": 180
+    },
+    {
+      "start_s": 90,
+      "end_s": 104,
+      "label": "07 / Failures and evidence limits",
+      "frames": 140
+    },
+    {
+      "start_s": 104,
+      "end_s": 120,
+      "label": "08 / Contribution and reproduction",
+      "frames": 160
+    }
+  ]
+}

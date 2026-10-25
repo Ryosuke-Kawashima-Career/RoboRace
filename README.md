@@ -2,7 +2,7 @@
 
 G1–G3 implementation: deterministic 2D differential-drive robot races, local sensing,
 collision detection, classical, behavior-cloning and independent PPO controllers,
-and reproducible recordings. Final comparison/submission remain later phases.
+and reproducible recordings. G4 adds a preliminary paired comparison and 3D physics demo; G5 prepares local submission media and a reproducible package. External publication/submission remain pending.
 See `dev/plans/README.md` for measured results and limitations.
 
 ## Run on the verified local environment
@@ -56,9 +56,7 @@ Metric units are metres and simulated seconds; controller timings are wall-clock
 The baseline stalls in some slalom/bottleneck/crossing cases. G2 must filter expert
 failures and measure coverage before cloning. The G2 learned policy currently collides
 on obstacle/crossing validation courses; it is not a reliable navigation controller.
-No 3D/physical validation, MP4 encoder or final course submission is implemented. The inherited
-environment must be replaced or independently verified for the final reproducible
-release. `dev/` and `docs/` remain ignored by the pre-existing `.gitignore`; explicitly
+A PyBullet 3D integration demo and MP4 recording are implemented. The model uses ideal velocity-servo bodies with decorative wheels; no physical hardware validation or final course submission is claimed. G5 records isolated-environment release checks. `dev/` and `docs/` remain ignored by the pre-existing `.gitignore`; explicitly
 decide what planning/assignment material to publish when preparing the public repo.
 
 ## G2 imitation learning
@@ -131,4 +129,32 @@ training and frozen held-out comparison remain G4 work.
 
 ## 3D comparison demo (G4/G4b)
 
-Run `.venv\Scripts\python.exe -m roborace.g4 compare` for the preliminary 40-layout paired comparison, and `.venv\Scripts\python.exe -m roborace.g4 demo` for checkpoint-controlled PyBullet races and synchronized comparison video. Install `requirements-3d.txt` first. Videos and logs: `artifacts/g4b/`; held-out results: `artifacts/g4/`. See [implementation, results and limitations](dev/plans/40_g4_report.md). The demo uses ideal velocity-servo bodies with decorative wheels. Full multi-seed comparison and G5 submission packaging remain incomplete.
+Run `.venv\Scripts\python.exe -m roborace.g4 compare` for the preliminary 40-layout paired comparison, and `.venv\Scripts\python.exe -m roborace.g4 demo` for checkpoint-controlled PyBullet races and synchronized comparison video. Install `requirements-3d.txt` first. Videos and logs: `artifacts/g4b/`; held-out results: `artifacts/g4/`. See [implementation, results and limitations](dev/plans/40_g4_report.md). The demo uses ideal velocity-servo bodies with decorative wheels. Full multi-seed comparison remains incomplete. G5 local media/package preparation is documented in dev/plans/50_g5_report.md; external submission remains pending.
+
+## G5 local submission package
+
+`artifacts/g5/RoboRace_submission.mp4` is the captioned 120-second film; the PDF is
+`artifacts/g5/説明資料_PAI最終課題_83792.pdf` (permitted account ID 83792). `artifacts/g5/RoboRace_submission_package.zip` includes source,
+checkpoints, raw evidence, media, third-party notices and per-file SHA-256 hashes.
+No GitHub/YouTube/OmniCampus publication or account action has been performed.
+
+Clean Windows x64 / Python 3.13 setup from the extracted code root:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements-release.txt
+.venv\Scripts\python.exe -m pytest -q
+.venv\Scripts\python.exe -m roborace.g4 demo
+```
+
+`requirements-release-lock.txt` captures the exact isolated runtime after successful
+installation. Install it with `--extra-index-url https://download.pytorch.org/whl/cpu`.
+Python 3.13 may compile PyBullet from source (a cached local wheel was reused in the
+G5 clean-environment test); Windows C++ build tools may be needed on a new machine.
+The lock is specific to the verified Windows/Python platform, not universal.
+
+Rebuild the film with `python scripts/build_g5_video.py` (Segoe UI on Windows).
+Rebuild the PDF with `python scripts/build_g5_pdf.py` using ReportLab; the authoring
+runtime is recorded separately. Run `python scripts/verify_g5.py` to check release
+integrity and selected evidence. See `submission/UPLOAD_METADATA.md` in the archive
+for account naming and the uncompleted external submission steps.

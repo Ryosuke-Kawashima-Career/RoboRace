@@ -1,0 +1,12 @@
+{
+  "decoded_frames": 1200,
+  "duration_s": 120.0,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 10.0,
+  "codec": "h264",
+  "audio": "no audio track requested",
+  "all_frames_decoded": true
+}

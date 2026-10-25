@@ -4,3 +4,7 @@ dev/
 __pycache__/
 *.py[cod]
 artifacts/g0/smoke_weights.pt
+
+.venv-g5/
+artifacts/g5/release/
+artifacts/g5/extracted_check/

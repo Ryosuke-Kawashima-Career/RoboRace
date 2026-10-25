@@ -1,0 +1,49 @@
+{
+  "python": "3.13.5",
+  "isolation": "new venv without system-site-packages",
+  "requirements": "requirements-release.txt",
+  "lock": "requirements-release-lock.txt",
+  "installation": "downloaded direct/transitive dependencies; reused locally compiled PyBullet wheel",
+  "pip_check": "No broken requirements found",
+  "pytest": {
+    "passed": 28,
+    "seconds": 8.78
+  },
+  "ppo_3d_smoke": {
+    "team_success": true,
+    "per_robot_success": [
+      true,
+      true,
+      true
+    ],
+    "finish_times_s": [
+      15.7,
+      15.8,
+      15.9
+    ],
+    "simulated_time_s": 15.9,
+    "steps": 159,
+    "collision": null,
+    "timeout": false,
+    "deadlock_observed": false,
+    "path_length_m": [
+      7.779973608255392,
+      7.860018163919443,
+      7.922822672128686
+    ],
+    "makespan_s": 15.9,
+    "capped_completion_s": 15.9,
+    "python": "3.13.5",
+    "torch": "2.9.1+cpu",
+    "observation_dimension": 44,
+    "camera_size": [
+      960,
+      720
+    ],
+    "isolated_environment": true,
+    "checkpoint_sha256": "de0978cceeefd606e54add551ec42ced8751166a2b864357796036ac86f941e2"
+  },
+  "raw_metrics_reconciled": 120,
+  "checkpoint_hashes_verified": 2,
+  "limits": "No full training rerun. New-machine PyBullet compilation/toolchain was not independently tested."
+}

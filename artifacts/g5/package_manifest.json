@@ -1,0 +1,12 @@
+{
+  "archive_sha256": "82d3c934577c74ff15bd6f210dc829dea5c7bb755eabad2d4deb436635a34fc4",
+  "files": 885,
+  "bytes": 7260532,
+  "excluded": [
+    "virtual environments",
+    "private docs/dev directories",
+    "course assignment PDF",
+    "Git history"
+  ],
+  "account_id": "83792"
+}

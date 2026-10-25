@@ -1,0 +1,7 @@
+{
+  "text_files_scanned": 803,
+  "checkpoint_metadata_scanned": 2,
+  "private_machine_path_or_account_name_matches": [],
+  "media": "generated simulator media only; no desktop/account captures",
+  "archive_exclusions": "no environments, private course PDFs, dev/docs directories or Git history"
+}
