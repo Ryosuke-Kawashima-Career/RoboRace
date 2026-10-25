@@ -1,0 +1,1638 @@
+{
+  "split": "train",
+  "filter": "keep only pre-arrival trajectories of robots that finish in a collision-free episode; retain successful individual robots in timeout episodes; discard all samples from collision episodes",
+  "records": [
+    {
+      "episode_id": 0,
+      "layout_seed": 10000,
+      "course": "open",
+      "heading_offsets_rad": [
+        -0.07299936228186998,
+        -0.07320235343555696,
+        0.12831720032743596
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 308,
+      "retained_agent_samples": 308,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.2,
+          10.3,
+          10.3
+        ],
+        "simulated_time_s": 10.3,
+        "steps": 103,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.7269518694448855,
+          7.80604329141077,
+          7.80394107094408
+        ],
+        "makespan_s": 10.3,
+        "capped_completion_s": 10.3
+      }
+    },
+    {
+      "episode_id": 1,
+      "layout_seed": 10001,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.013043768144924278,
+        0.12328343232072655,
+        -0.1218865620074342
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          1.4515838374800936,
+          2.3160570933483458,
+          1.2755300998687773
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 2,
+      "layout_seed": 10002,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        -0.0718346187638854,
+        -0.09482274464808399,
+        0.008279511015819335
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1303,
+      "retained_agent_samples": 103,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.3,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.1775302665192777,
+          7.807128828293466,
+          3.175463404980171
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 3,
+      "layout_seed": 10003,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        0.06121938011574235,
+        0.13352310682876065,
+        -0.046816667685084204
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.6646465182304375,
+          3.535456253374832,
+          3.715786363313475
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 4,
+      "layout_seed": 10004,
+      "course": "open",
+      "heading_offsets_rad": [
+        -0.007339753474959909,
+        -0.05440367908379372,
+        -0.12269298667571425
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 306,
+      "retained_agent_samples": 306,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.1,
+          10.3,
+          10.2
+        ],
+        "simulated_time_s": 10.3,
+        "steps": 103,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.646592987410729,
+          7.8047209501266055,
+          7.728319307800968
+        ],
+        "makespan_s": 10.3,
+        "capped_completion_s": 10.3
+      }
+    },
+    {
+      "episode_id": 5,
+      "layout_seed": 10005,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.12510876653031902,
+        0.06542939433781345,
+        -0.044417714242859535
+      ],
+      "successful_robot_ids_retained": [
+        0
+      ],
+      "attempted_agent_samples": 1312,
+      "retained_agent_samples": 112,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          11.2,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          8.236137673527484,
+          1.995255652348841,
+          1.2237400005034578
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 6,
+      "layout_seed": 10006,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        -0.12365258347418884,
+        -0.0019363613384267009,
+        -0.033440391217533186
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1304,
+      "retained_agent_samples": 104,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.4,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.2992277767765144,
+          7.887110768722241,
+          3.2224427170711816
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 7,
+      "layout_seed": 10007,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        0.087226376092257,
+        0.09038626921955906,
+        0.0436142944978781
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.604282575845727,
+          3.4346818188483454,
+          3.7598206341266707
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 8,
+      "layout_seed": 10008,
+      "course": "open",
+      "heading_offsets_rad": [
+        0.004415120939156331,
+        -0.07672574680652336,
+        0.07079155961435035
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 303,
+      "retained_agent_samples": 303,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.2,
+          10.1,
+          10.0
+        ],
+        "simulated_time_s": 10.2,
+        "steps": 102,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.724998277425598,
+          7.6471685029165055,
+          7.564527016878105
+        ],
+        "makespan_s": 10.2,
+        "capped_completion_s": 10.2
+      }
+    },
+    {
+      "episode_id": 9,
+      "layout_seed": 10009,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.14291602858235794,
+        0.05935300432367607,
+        -0.14080102894248658
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          0.9442335128784185,
+          1.9982274260166353,
+          1.4485042393207546
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 10,
+      "layout_seed": 10010,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        0.1220173975746259,
+        0.04904949540877496,
+        -0.014126828305127903
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1301,
+      "retained_agent_samples": 101,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.1,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.3016883308625253,
+          7.648806631597688,
+          3.106339471346853
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 11,
+      "layout_seed": 10011,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        -0.042791947476345696,
+        -0.10033871613032183,
+        -0.14117915398749367
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.6898272454738636,
+          3.539838033518093,
+          3.7803017854690575
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 12,
+      "layout_seed": 10012,
+      "course": "open",
+      "heading_offsets_rad": [
+        -0.05847098552604546,
+        0.05060276262813973,
+        -0.0450341261655572
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 308,
+      "retained_agent_samples": 308,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.3,
+          10.2,
+          10.3
+        ],
+        "simulated_time_s": 10.3,
+        "steps": 103,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.807149058115927,
+          7.727408039434911,
+          7.804937885688792
+        ],
+        "makespan_s": 10.3,
+        "capped_completion_s": 10.3
+      }
+    },
+    {
+      "episode_id": 13,
+      "layout_seed": 10013,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        0.11590666365093696,
+        0.08543644414981869,
+        -0.03401189993487655
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          1.3763503895073304,
+          2.0572334110736867,
+          1.2473746035356477
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 14,
+      "layout_seed": 10014,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        -0.1435575944387367,
+        0.007531729086011574,
+        0.06721867588116504
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1302,
+      "retained_agent_samples": 102,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.2,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.3028621333370904,
+          7.729831343557723,
+          3.208266658623192
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 15,
+      "layout_seed": 10015,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        -0.07502290351876231,
+        0.044380669047917765,
+        -0.1276721578328118
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.609469270706177,
+          3.5801368602193464,
+          3.724144837750121
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 16,
+      "layout_seed": 10016,
+      "course": "open",
+      "heading_offsets_rad": [
+        0.07063283726380112,
+        -0.12441213754558728,
+        0.036366750384388885
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 309,
+      "retained_agent_samples": 309,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.3,
+          10.3,
+          10.3
+        ],
+        "simulated_time_s": 10.3,
+        "steps": 103,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.804529619216848,
+          7.803541308641373,
+          7.805406939177926
+        ],
+        "makespan_s": 10.3,
+        "capped_completion_s": 10.3
+      }
+    },
+    {
+      "episode_id": 17,
+      "layout_seed": 10017,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.1447774911604389,
+        -0.060945562622947105,
+        -0.06848763291690092
+      ],
+      "successful_robot_ids_retained": [
+        0
+      ],
+      "attempted_agent_samples": 1309,
+      "retained_agent_samples": 109,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          10.9,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          7.997060540908803,
+          2.148354674810842,
+          1.4165279701592945
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 18,
+      "layout_seed": 10018,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        0.06853735849248893,
+        -0.03938931631702319,
+        0.016320896976667942
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1304,
+      "retained_agent_samples": 104,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.4,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.2264032300159435,
+          7.886625914788307,
+          3.091633265754188
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 19,
+      "layout_seed": 10019,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        -0.12558848959856117,
+        -0.04235308473596229,
+        -0.0938894524203703
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.6885130345821455,
+          3.53573739411165,
+          3.7380042291423154
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 20,
+      "layout_seed": 10020,
+      "course": "open",
+      "heading_offsets_rad": [
+        0.020839664758296905,
+        -0.10592769051433987,
+        -0.04299257564434633
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 310,
+      "retained_agent_samples": 310,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.4,
+          10.3,
+          10.3
+        ],
+        "simulated_time_s": 10.4,
+        "steps": 104,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.88495914936063,
+          7.803942352533364,
+          7.804825747013129
+        ],
+        "makespan_s": 10.4,
+        "capped_completion_s": 10.4
+      }
+    },
+    {
+      "episode_id": 21,
+      "layout_seed": 10021,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.09955386016094694,
+        0.08713000789258568,
+        -0.04900118145490437
+      ],
+      "successful_robot_ids_retained": [
+        0
+      ],
+      "attempted_agent_samples": 1311,
+      "retained_agent_samples": 111,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          11.1,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          8.186733090557556,
+          1.8995208599592754,
+          1.266194200515745
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 22,
+      "layout_seed": 10022,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        0.06841379425613137,
+        -0.04182146090283799,
+        0.010290668804928127
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1300,
+      "retained_agent_samples": 100,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.0,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.1505398111637986,
+          7.568837610539601,
+          3.3233527287924245
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 23,
+      "layout_seed": 10023,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        -0.07062814043172362,
+        -0.14548884348532937,
+        0.10157027079083261
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.707466054738523,
+          3.5455460660877014,
+          3.725926082792048
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 24,
+      "layout_seed": 10024,
+      "course": "open",
+      "heading_offsets_rad": [
+        0.034705304779743956,
+        0.06190547904653809,
+        0.0007730395009192814
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 305,
+      "retained_agent_samples": 305,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.3,
+          10.2,
+          10.0
+        ],
+        "simulated_time_s": 10.3,
+        "steps": 103,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.806646179807606,
+          7.725749140329142,
+          7.569533793154368
+        ],
+        "makespan_s": 10.3,
+        "capped_completion_s": 10.3
+      }
+    },
+    {
+      "episode_id": 25,
+      "layout_seed": 10025,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.0036914474457819535,
+        -0.10137979207171957,
+        -0.05731298547791987
+      ],
+      "successful_robot_ids_retained": [
+        0
+      ],
+      "attempted_agent_samples": 1308,
+      "retained_agent_samples": 108,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          10.8,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          7.988416350668942,
+          2.148577490244713,
+          1.2771894245329136
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 26,
+      "layout_seed": 10026,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        0.01398311701447258,
+        -0.13917955829324571,
+        -0.0212775428557056
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1301,
+      "retained_agent_samples": 101,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.1,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.1119192715674093,
+          7.6438237346976905,
+          3.161167106300872
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 27,
+      "layout_seed": 10027,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        -0.11497204050190724,
+        -0.029611419522191998,
+        0.13073948196975602
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.6987542152404753,
+          3.5499939894054795,
+          3.868390160799034
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 28,
+      "layout_seed": 10028,
+      "course": "open",
+      "heading_offsets_rad": [
+        0.014406383152091973,
+        -0.045524155605703095,
+        -0.04241439309239871
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 309,
+      "retained_agent_samples": 309,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.3,
+          10.2,
+          10.4
+        ],
+        "simulated_time_s": 10.4,
+        "steps": 104,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.8064027528158295,
+          7.727916196490937,
+          7.884842298560494
+        ],
+        "makespan_s": 10.4,
+        "capped_completion_s": 10.4
+      }
+    },
+    {
+      "episode_id": 29,
+      "layout_seed": 10029,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        0.05600801526762858,
+        0.09810197142438229,
+        0.014597601803754523
+      ],
+      "successful_robot_ids_retained": [
+        0
+      ],
+      "attempted_agent_samples": 1312,
+      "retained_agent_samples": 112,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          11.2,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          8.163309640027034,
+          2.2050146313450636,
+          0.9209388423142365
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 30,
+      "layout_seed": 10030,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        0.13436078581680314,
+        -0.017229056791488062,
+        0.07144699129714854
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1302,
+      "retained_agent_samples": 102,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.2,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.2274302169460247,
+          7.724972105026277,
+          3.217344816334159
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 31,
+      "layout_seed": 10031,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        -0.039674998805384915,
+        0.0010288679279846502,
+        0.07236555712488202
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.8048516094684466,
+          3.553263783137658,
+          3.7595059871673495
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 32,
+      "layout_seed": 10032,
+      "course": "open",
+      "heading_offsets_rad": [
+        -0.12410235948557054,
+        0.13167066278201636,
+        -0.01979834430796354
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 310,
+      "retained_agent_samples": 310,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.3,
+          10.3,
+          10.4
+        ],
+        "simulated_time_s": 10.4,
+        "steps": 104,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.803548514843015,
+          7.805265992857966,
+          7.885002227129332
+        ],
+        "makespan_s": 10.4,
+        "capped_completion_s": 10.4
+      }
+    },
+    {
+      "episode_id": 33,
+      "layout_seed": 10033,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        0.11770023550005063,
+        0.04138122412018738,
+        0.04619785383072064
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1
+      ],
+      "attempted_agent_samples": 827,
+      "retained_agent_samples": 227,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          11.5,
+          11.2,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          8.370909728246572,
+          8.12553656514067,
+          1.1510366077796015
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 34,
+      "layout_seed": 10034,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        -0.13216213268670224,
+        -0.121352164144531,
+        0.11644076927768429
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1302,
+      "retained_agent_samples": 102,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.2,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.1979685366330868,
+          7.725664406737459,
+          3.330453104719053
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 35,
+      "layout_seed": 10035,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        0.09925625522003986,
+        -0.1397404694103013,
+        0.03254978979988357
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.8710720236301412,
+          3.4981593787670167,
+          3.6629104709897278
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 36,
+      "layout_seed": 10036,
+      "course": "open",
+      "heading_offsets_rad": [
+        -0.04817960780410732,
+        0.015253208196901735,
+        -0.01035951161728127
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        1,
+        2
+      ],
+      "attempted_agent_samples": 310,
+      "retained_agent_samples": 310,
+      "summary": {
+        "team_success": true,
+        "per_robot_success": [
+          true,
+          true,
+          true
+        ],
+        "finish_times_s": [
+          10.5,
+          10.2,
+          10.3
+        ],
+        "simulated_time_s": 10.5,
+        "steps": 105,
+        "collision": null,
+        "timeout": false,
+        "deadlock_observed": false,
+        "path_length_m": [
+          7.9654832872175705,
+          7.7249781429767275,
+          7.804989987611793
+        ],
+        "makespan_s": 10.5,
+        "capped_completion_s": 10.5
+      }
+    },
+    {
+      "episode_id": 37,
+      "layout_seed": 10037,
+      "course": "slalom",
+      "heading_offsets_rad": [
+        -0.0673386080132958,
+        -0.07517448272137478,
+        -0.09328083968410666
+      ],
+      "successful_robot_ids_retained": [
+        0,
+        2
+      ],
+      "attempted_agent_samples": 820,
+      "retained_agent_samples": 220,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          true,
+          false,
+          true
+        ],
+        "finish_times_s": [
+          11.1,
+          null,
+          10.9
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          8.188620439730645,
+          2.1028706221145126,
+          7.989837415113078
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 38,
+      "layout_seed": 10038,
+      "course": "bottleneck",
+      "heading_offsets_rad": [
+        -0.09064424551103527,
+        0.0974693332558988,
+        0.03324386459628392
+      ],
+      "successful_robot_ids_retained": [
+        1
+      ],
+      "attempted_agent_samples": 1302,
+      "retained_agent_samples": 102,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          true,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          10.2,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.124925802561297,
+          7.724133516866251,
+          3.0482948640527843
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    },
+    {
+      "episode_id": 39,
+      "layout_seed": 10039,
+      "course": "crossing",
+      "heading_offsets_rad": [
+        0.11994630268065778,
+        -0.06650123345636921,
+        -0.12029066744054318
+      ],
+      "successful_robot_ids_retained": [],
+      "attempted_agent_samples": 1800,
+      "retained_agent_samples": 0,
+      "summary": {
+        "team_success": false,
+        "per_robot_success": [
+          false,
+          false,
+          false
+        ],
+        "finish_times_s": [
+          null,
+          null,
+          null
+        ],
+        "simulated_time_s": 60.0,
+        "steps": 600,
+        "collision": null,
+        "timeout": true,
+        "deadlock_observed": true,
+        "path_length_m": [
+          3.743895097531769,
+          3.602138166108011,
+          3.809938567876822
+        ],
+        "makespan_s": null,
+        "capped_completion_s": 60.0
+      }
+    }
+  ],
+  "collection_config": {
+    "dataset_layouts": 40,
+    "heading_perturbation_rad": 0.15,
+    "collection_seed": 700,
+    "filter": "keep only pre-arrival trajectories of robots that finish in a collision-free episode; retain successful individual robots in timeout episodes; discard all samples from collision episodes",
+    "hidden_sizes": [
+      128,
+      128,
+      64
+    ],
+    "epochs": 50,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "training_seed": 0,
+    "torch_threads": 4,
+    "internal_holdout": "whole training episodes with layout index modulo 5 equal to 0; never split adjacent frames",
+    "validation_interval_epochs": 10,
+    "checkpoint_selection": "first four frozen validation layouts: maximum team success then minimum capped completion then minimum internal holdout MSE",
+    "arrival_stop_distance_m": 0.27,
+    "arrival_stop_note": "same deterministic distance stop as Classical; no classical obstacle avoidance or safety filter during BC inference",
+    "wall_clock_limit_s": 1800
+  },
+  "dataset_sha256": "8d8b04083c31983163a31dd6e942f48025d3b8f5315d1ef3c4f047c32b03a2ee",
+  "source_sha256": "5d610a6114418a1ab739dbfeeb7ad669088f37a4efe5cabe4729e36a9808107b",
+  "training_manifest_sha256": "18a9e86cece5982440237d55eee8eba35446e586c273b5bc8cd60a9b515d9d73",
+  "environment_sha256": "5370d5a9d439f4bc0beec12332013c548bd782082801c8db0b1779c34c13d7e5",
+  "wall_time_s": 126.31065959995613,
+  "world_steps": 19034,
+  "retained_agent_samples": 5098,
+  "attempted_agent_samples": 47698,
+  "course_retained_samples": {
+    "open": 3078,
+    "slalom": 999,
+    "bottleneck": 1021,
+    "crossing": 0
+  }
+}

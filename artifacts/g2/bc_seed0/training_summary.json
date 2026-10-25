@@ -1,0 +1,81 @@
+{
+  "method": "behavior_cloning_with_arrival_stop",
+  "best_epoch": 40,
+  "best_score": [
+    1,
+    -47.8,
+    -0.002872343407943845
+  ],
+  "train_samples": 4057,
+  "holdout_samples": 1041,
+  "train_episode_ids": [
+    2,
+    4,
+    6,
+    8,
+    12,
+    14,
+    16,
+    17,
+    18,
+    21,
+    22,
+    24,
+    26,
+    28,
+    29,
+    32,
+    33,
+    34,
+    36,
+    37,
+    38
+  ],
+  "holdout_episode_ids": [
+    0,
+    5,
+    10,
+    20,
+    25,
+    30
+  ],
+  "normalization_fit": "training episodes only, excludes internal holdout and all validation/test data",
+  "loss": "MSE over [linear_speed, angular_speed/2], weight 3 for abs(angular_speed)>0.2 rad/s else 1",
+  "validation_layout_seeds": [
+    20000,
+    20001,
+    20002,
+    20003
+  ],
+  "validation_manifest_sha256": "a50f6f126a54a611bae1026e5cb1fd12a0c42aff111b47de0d9f89acd57828a2",
+  "checkpoint_sha256": "6709d826a4e747b22e80083f3e97853ea4edad12cbb037891afa0a65dcbb3702",
+  "dataset_sha256": "8d8b04083c31983163a31dd6e942f48025d3b8f5315d1ef3c4f047c32b03a2ee",
+  "source_sha256": "5d610a6114418a1ab739dbfeeb7ad669088f37a4efe5cabe4729e36a9808107b",
+  "config": {
+    "dataset_layouts": 40,
+    "heading_perturbation_rad": 0.15,
+    "collection_seed": 700,
+    "filter": "keep only pre-arrival trajectories of robots that finish in a collision-free episode; retain successful individual robots in timeout episodes; discard all samples from collision episodes",
+    "hidden_sizes": [
+      128,
+      128,
+      64
+    ],
+    "epochs": 50,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "training_seed": 0,
+    "torch_threads": 4,
+    "internal_holdout": "whole training episodes with layout index modulo 5 equal to 0; never split adjacent frames",
+    "validation_interval_epochs": 10,
+    "checkpoint_selection": "first four frozen validation layouts: maximum team success then minimum capped completion then minimum internal holdout MSE",
+    "arrival_stop_distance_m": 0.27,
+    "arrival_stop_note": "same deterministic distance stop as Classical; no classical obstacle avoidance or safety filter during BC inference",
+    "wall_clock_limit_s": 1800
+  },
+  "completed_epochs": 50,
+  "wall_time_s": 24.156466499902308,
+  "exact_reload": true,
+  "collection_wall_time_s": 126.31065959995613,
+  "note": "G2 validation selection, not held-out test performance; seed 0 only; other training seeds remain for G4"
+}

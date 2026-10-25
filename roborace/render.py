@@ -33,7 +33,8 @@ def frame(world):
         draw.ellipse((x-r, y-r, x+r, y+r), fill=color, outline='black')
         draw.line((x, y, x+r*np.cos(state[2]), y-r*np.sin(state[2])), fill='white', width=3)
     status = 'COLLISION' if world.contact else 'SUCCESS' if world.finished.all() else 'TIMEOUT' if world.truncated else 'RUNNING'
-    draw.text((20, 638), f"RoboRace G1 | classical | {world.scene['course']} | seed {world.scene['seed']}", fill='#202634')
+    label = getattr(world, 'controller_name', 'classical')
+    draw.text((20, 638), f"RoboRace | {label} | {world.scene['course']} | seed {world.scene['seed']}", fill='#202634')
     draw.text((20, 658), f"Simulated time {world.time:.1f}s | arrived {sum(world.finished)}/{world.n} | {status}", fill='#202634')
     draw.text((20, 680), '2D simulation | 1x playback | circles = robots; rings = goals', fill='#202634')
     return image

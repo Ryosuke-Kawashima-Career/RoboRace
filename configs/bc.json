@@ -1,0 +1,18 @@
+{
+  "dataset_layouts": 40,
+  "heading_perturbation_rad": 0.15,
+  "collection_seed": 700,
+  "filter": "keep only pre-arrival trajectories of robots that finish in a collision-free episode; retain successful individual robots in timeout episodes; discard all samples from collision episodes",
+  "hidden_sizes": [128, 128, 64],
+  "epochs": 50,
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "training_seed": 0,
+  "torch_threads": 4,
+  "internal_holdout": "whole training episodes with layout index modulo 5 equal to 0; never split adjacent frames",
+  "validation_interval_epochs": 10,
+  "checkpoint_selection": "first four frozen validation layouts: maximum team success then minimum capped completion then minimum internal holdout MSE",
+  "arrival_stop_distance_m": 0.27,
+  "arrival_stop_note": "same deterministic distance stop as Classical; no classical obstacle avoidance or safety filter during BC inference",
+  "wall_clock_limit_s": 1800
+}

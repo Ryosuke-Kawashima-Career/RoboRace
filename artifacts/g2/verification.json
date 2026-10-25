@@ -1,0 +1,29 @@
+{
+  "dataset": {
+    "checksum_valid": true,
+    "split_filter_valid": true,
+    "normalization_train_only": true,
+    "retained_samples": 5098,
+    "scenario_manifests_unchanged": true
+  },
+  "demo_open": {
+    "learned_action_match": true,
+    "exact_replay": true,
+    "team_success": true
+  },
+  "demo_slalom_failure": {
+    "learned_action_match": true,
+    "exact_replay": true,
+    "team_success": false
+  },
+  "recordings": {
+    "demo_open": {
+      "frames": 57,
+      "duration_ms": 11400
+    },
+    "demo_slalom_failure": {
+      "frames": 12,
+      "duration_ms": 2300
+    }
+  }
+}

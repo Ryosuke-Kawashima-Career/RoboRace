@@ -1,0 +1,5 @@
+-r requirements-runtime.txt
+torch==2.9.1+cpu
+# Direct observed version for learning-curve generation; transitive dependencies
+# are not yet a complete portable release lock.
+matplotlib==3.10.7

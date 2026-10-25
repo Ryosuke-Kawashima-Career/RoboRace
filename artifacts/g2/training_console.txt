@@ -1,0 +1,131 @@
+{"epoch": 1, "train_mse": 0.009912876412272453, "holdout_mse": 0.009562855586409569, "elapsed_wall_s": 2.147597499890253}
+{"epoch": 2, "train_mse": 0.008179701864719391, "holdout_mse": 0.007939189672470093, "elapsed_wall_s": 2.2125439998926595}
+{"epoch": 3, "train_mse": 0.006028440315276384, "holdout_mse": 0.00567605160176754, "elapsed_wall_s": 2.2612831000005826}
+{"epoch": 4, "train_mse": 0.005937689449638128, "holdout_mse": 0.005798481870442629, "elapsed_wall_s": 2.311556899920106}
+{"epoch": 5, "train_mse": 0.005368798039853573, "holdout_mse": 0.005106658674776554, "elapsed_wall_s": 2.3716020999709144}
+{"epoch": 6, "train_mse": 0.005007443483918905, "holdout_mse": 0.0048055327497422695, "elapsed_wall_s": 2.4268414999824017}
+{"epoch": 7, "train_mse": 0.004899728577584028, "holdout_mse": 0.00469973823055625, "elapsed_wall_s": 2.50696639996022}
+{"epoch": 8, "train_mse": 0.004579300060868263, "holdout_mse": 0.004442946519702673, "elapsed_wall_s": 2.558019299991429}
+{"epoch": 9, "train_mse": 0.004500310402363539, "holdout_mse": 0.004240700975060463, "elapsed_wall_s": 2.605306199984625}
+{"epoch": 10, "train_mse": 0.004186755977571011, "holdout_mse": 0.004033629782497883, "elapsed_wall_s": 2.6582577999215573, "validation_successes": 0, "validation_episodes": 4, "validation_capped_s": 60.0, "validation_collisions": 4}
+{"epoch": 11, "train_mse": 0.0039571356028318405, "holdout_mse": 0.0038260582368820906, "elapsed_wall_s": 4.548307599965483}
+{"epoch": 12, "train_mse": 0.003922204952687025, "holdout_mse": 0.0038347854278981686, "elapsed_wall_s": 4.604592599906027}
+{"epoch": 13, "train_mse": 0.003779670223593712, "holdout_mse": 0.0037339094560593367, "elapsed_wall_s": 4.654963899985887}
+{"epoch": 14, "train_mse": 0.0036293084267526865, "holdout_mse": 0.0036108095664530993, "elapsed_wall_s": 4.700070399907418}
+{"epoch": 15, "train_mse": 0.0033222504425793886, "holdout_mse": 0.0032691331580281258, "elapsed_wall_s": 4.752756999921985}
+{"epoch": 16, "train_mse": 0.003536510979756713, "holdout_mse": 0.003503636224195361, "elapsed_wall_s": 4.808180599939078}
+{"epoch": 17, "train_mse": 0.0035993356723338366, "holdout_mse": 0.0036233870778232813, "elapsed_wall_s": 4.860039299936034}
+{"epoch": 18, "train_mse": 0.0031764735467731953, "holdout_mse": 0.003226732835173607, "elapsed_wall_s": 4.920534499920905}
+{"epoch": 19, "train_mse": 0.003052745945751667, "holdout_mse": 0.0031449769157916307, "elapsed_wall_s": 4.974569599959068}
+{"epoch": 20, "train_mse": 0.0031929428223520517, "holdout_mse": 0.003274309216067195, "elapsed_wall_s": 5.031539699994028, "validation_successes": 0, "validation_episodes": 4, "validation_capped_s": 60.0, "validation_collisions": 4}
+{"epoch": 21, "train_mse": 0.0029857156332582235, "holdout_mse": 0.0031615423504263163, "elapsed_wall_s": 7.152571899932809}
+{"epoch": 22, "train_mse": 0.0032361664343625307, "holdout_mse": 0.0033722715452313423, "elapsed_wall_s": 7.229550099931657}
+{"epoch": 23, "train_mse": 0.003108264645561576, "holdout_mse": 0.0032733019907027483, "elapsed_wall_s": 7.306647299905308}
+{"epoch": 24, "train_mse": 0.002910913433879614, "holdout_mse": 0.0031302133575081825, "elapsed_wall_s": 7.392537299892865}
+{"epoch": 25, "train_mse": 0.00273143220692873, "holdout_mse": 0.002925274660810828, "elapsed_wall_s": 7.491379499901086}
+{"epoch": 26, "train_mse": 0.0028945289086550474, "holdout_mse": 0.0031942592468112707, "elapsed_wall_s": 7.574005999951623}
+{"epoch": 27, "train_mse": 0.002805649768561125, "holdout_mse": 0.0030782234389334917, "elapsed_wall_s": 7.671390899922699}
+{"epoch": 28, "train_mse": 0.0027111012022942305, "holdout_mse": 0.00285293604247272, "elapsed_wall_s": 7.769266499904916}
+{"epoch": 29, "train_mse": 0.0028640618547797203, "holdout_mse": 0.003209487535059452, "elapsed_wall_s": 7.866455199895427}
+{"epoch": 30, "train_mse": 0.002745256992056966, "holdout_mse": 0.003152064047753811, "elapsed_wall_s": 7.973520999890752, "validation_successes": 0, "validation_episodes": 4, "validation_capped_s": 60.0, "validation_collisions": 4}
+{"epoch": 31, "train_mse": 0.003260198049247265, "holdout_mse": 0.0034904261119663715, "elapsed_wall_s": 14.958150899969041}
+{"epoch": 32, "train_mse": 0.002651331713423133, "holdout_mse": 0.002981730503961444, "elapsed_wall_s": 15.07650189998094}
+{"epoch": 33, "train_mse": 0.0024251260329037905, "holdout_mse": 0.00293153990060091, "elapsed_wall_s": 15.190140899969265}
+{"epoch": 34, "train_mse": 0.0024460165295749903, "holdout_mse": 0.0028191276360303164, "elapsed_wall_s": 15.293065199977718}
+{"epoch": 35, "train_mse": 0.002469834638759494, "holdout_mse": 0.002920926781371236, "elapsed_wall_s": 15.424055899959058}
+{"epoch": 36, "train_mse": 0.002647008514031768, "holdout_mse": 0.0031015935819596052, "elapsed_wall_s": 15.540418399963528}
+{"epoch": 37, "train_mse": 0.0023766772355884314, "holdout_mse": 0.0029651396907866, "elapsed_wall_s": 15.670132899889722}
+{"epoch": 38, "train_mse": 0.0024137133732438087, "holdout_mse": 0.0029881170485168695, "elapsed_wall_s": 15.789869599975646}
+{"epoch": 39, "train_mse": 0.0024418607354164124, "holdout_mse": 0.0029705020133405924, "elapsed_wall_s": 15.910633499966934}
+{"epoch": 40, "train_mse": 0.002338261343538761, "holdout_mse": 0.002872343407943845, "elapsed_wall_s": 16.06637839996256, "validation_successes": 1, "validation_episodes": 4, "validation_capped_s": 47.8, "validation_collisions": 3}
+{"epoch": 41, "train_mse": 0.002260375302284956, "holdout_mse": 0.00286678783595562, "elapsed_wall_s": 19.50680079997983}
+{"epoch": 42, "train_mse": 0.0021857591345906258, "holdout_mse": 0.002883399836719036, "elapsed_wall_s": 19.66266289993655}
+{"epoch": 43, "train_mse": 0.0022646132856607437, "holdout_mse": 0.0030069476924836636, "elapsed_wall_s": 19.828175099915825}
+{"epoch": 44, "train_mse": 0.0021719762589782476, "holdout_mse": 0.0028445073403418064, "elapsed_wall_s": 19.96725639991928}
+{"epoch": 45, "train_mse": 0.0022017979063093662, "holdout_mse": 0.0030597627628594637, "elapsed_wall_s": 20.118608699995093}
+{"epoch": 46, "train_mse": 0.0023659812286496162, "holdout_mse": 0.0031169571448117495, "elapsed_wall_s": 20.280656899907626}
+{"epoch": 47, "train_mse": 0.0022410182282328606, "holdout_mse": 0.0030559152364730835, "elapsed_wall_s": 20.432932399911806}
+{"epoch": 48, "train_mse": 0.0020433743484318256, "holdout_mse": 0.0028439017478376627, "elapsed_wall_s": 20.61283379991073}
+{"epoch": 49, "train_mse": 0.002143159508705139, "holdout_mse": 0.0028959212359040976, "elapsed_wall_s": 20.75566009990871}
+{"epoch": 50, "train_mse": 0.002212892984971404, "holdout_mse": 0.003086878452450037, "elapsed_wall_s": 20.876183999935165, "validation_successes": 1, "validation_episodes": 4, "validation_capped_s": 48.025, "validation_collisions": 3}
+{
+  "method": "behavior_cloning_with_arrival_stop",
+  "best_epoch": 40,
+  "best_score": [
+    1,
+    -47.8,
+    -0.002872343407943845
+  ],
+  "train_samples": 4057,
+  "holdout_samples": 1041,
+  "train_episode_ids": [
+    2,
+    4,
+    6,
+    8,
+    12,
+    14,
+    16,
+    17,
+    18,
+    21,
+    22,
+    24,
+    26,
+    28,
+    29,
+    32,
+    33,
+    34,
+    36,
+    37,
+    38
+  ],
+  "holdout_episode_ids": [
+    0,
+    5,
+    10,
+    20,
+    25,
+    30
+  ],
+  "normalization_fit": "training episodes only, excludes internal holdout and all validation/test data",
+  "loss": "MSE over [linear_speed, angular_speed/2], weight 3 for abs(angular_speed)>0.2 rad/s else 1",
+  "validation_layout_seeds": [
+    20000,
+    20001,
+    20002,
+    20003
+  ],
+  "validation_manifest_sha256": "a50f6f126a54a611bae1026e5cb1fd12a0c42aff111b47de0d9f89acd57828a2",
+  "checkpoint_sha256": "6709d826a4e747b22e80083f3e97853ea4edad12cbb037891afa0a65dcbb3702",
+  "dataset_sha256": "8d8b04083c31983163a31dd6e942f48025d3b8f5315d1ef3c4f047c32b03a2ee",
+  "source_sha256": "5d610a6114418a1ab739dbfeeb7ad669088f37a4efe5cabe4729e36a9808107b",
+  "config": {
+    "dataset_layouts": 40,
+    "heading_perturbation_rad": 0.15,
+    "collection_seed": 700,
+    "filter": "keep only pre-arrival trajectories of robots that finish in a collision-free episode; retain successful individual robots in timeout episodes; discard all samples from collision episodes",
+    "hidden_sizes": [
+      128,
+      128,
+      64
+    ],
+    "epochs": 50,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "training_seed": 0,
+    "torch_threads": 4,
+    "internal_holdout": "whole training episodes with layout index modulo 5 equal to 0; never split adjacent frames",
+    "validation_interval_epochs": 10,
+    "checkpoint_selection": "first four frozen validation layouts: maximum team success then minimum capped completion then minimum internal holdout MSE",
+    "arrival_stop_distance_m": 0.27,
+    "arrival_stop_note": "same deterministic distance stop as Classical; no classical obstacle avoidance or safety filter during BC inference",
+    "wall_clock_limit_s": 1800
+  },
+  "completed_epochs": 50,
+  "wall_time_s": 24.156466499902308,
+  "exact_reload": true,
+  "collection_wall_time_s": 126.31065959995613,
+  "note": "G2 validation selection, not held-out test performance; seed 0 only; other training seeds remain for G4"
+}

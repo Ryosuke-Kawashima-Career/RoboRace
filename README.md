@@ -1,8 +1,8 @@
 # RoboRace
 
-G1 implementation: deterministic 2D differential-drive robot races, local sensing,
-collision detection, a classical controller and reproducible recordings. AI training
-and the final submission are later phases. See `dev/plans/README.md` for the roadmap.
+G1/G2 implementation: deterministic 2D differential-drive robot races, local sensing,
+collision detection, classical and trained behavior-cloning controllers, and reproducible
+recordings. PPO and final submission are later phases. See `dev/plans/README.md`.
 
 ## Run on the verified local environment
 
@@ -53,8 +53,37 @@ Metric units are metres and simulated seconds; controller timings are wall-clock
 ## Current limitations
 
 The baseline stalls in some slalom/bottleneck/crossing cases. G2 must filter expert
-failures and measure coverage before cloning. No learned navigation, 3D/physical
-validation, MP4 encoder or final course submission is implemented. The inherited
+failures and measure coverage before cloning. The G2 learned policy currently collides
+on obstacle/crossing validation courses; it is not a reliable navigation controller.
+No 3D/physical validation, MP4 encoder or final course submission is implemented. The inherited
 environment must be replaced or independently verified for the final reproducible
 release. `dev/` and `docs/` remain ignored by the pre-existing `.gitignore`; explicitly
 decide what planning/assignment material to publish when preparing the public repo.
+
+## G2 imitation learning
+
+Verified locally with CPU PyTorch 2.9.1+cpu. `requirements-learning.txt` records direct
+versions; a complete isolated release lock is still pending. From the repository root:
+
+```powershell
+# Reuse the existing filtered dataset/checkpoint, or explicitly rebuild them:
+& .\.venv\Scripts\python.exe -m roborace.cli collect-bc --dataset artifacts/g2/dataset
+& .\.venv\Scripts\python.exe -m roborace.cli train-bc --dataset artifacts/g2/dataset --output artifacts/g2/bc_seed0
+& .\.venv\Scripts\python.exe -m roborace.cli evaluate --controller bc --checkpoint artifacts/g2/bc_seed0/policy.pt --output artifacts/g2/validation
+& .\.venv\Scripts\python.exe -m roborace.cli demo --controller bc --checkpoint artifacts/g2/bc_seed0/policy.pt --course open --seed 20000 --output artifacts/g2/demo_open
+& .\.venv\Scripts\python.exe -m roborace.cli demo --controller bc --checkpoint artifacts/g2/bc_seed0/policy.pt --course slalom --seed 20001 --output artifacts/g2/demo_slalom_failure
+& .\.venv\Scripts\python.exe scripts/verify_g2.py
+```
+
+Collection uses only the first 40 training layouts with seeded initial-heading
+perturbations. It keeps pre-arrival trajectories only for robots that finish, and
+rejects every trajectory from a team-collision episode. Partial successes in timeout
+episodes are retained and explicitly counted. No validation/test trajectories become
+demonstrations. Internal fit/holdout uses whole training episodes; normalization fits
+only the fit partition. Validation selects checkpoints and is not an unbiased test.
+
+The MLP learns bounded speed/turn actions; the same deterministic 0.27 m arrival stop
+as the classical controller is applied explicitly. No classical obstacle-avoidance
+fallback runs during learned inference. Checkpoints store architecture, statistics,
+training configuration and data/environment/source provenance. Default G2 uses one
+training seed; the multi-seed final comparison remains G4 work.
