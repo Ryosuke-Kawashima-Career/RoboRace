@@ -1,0 +1,48 @@
+{
+  "schema_version": "roborace-v1",
+  "backend": "numpy-2d",
+  "nominal_robots": 3,
+  "maximum_observed_peers": 3,
+  "arena_m": [10.0, 10.0],
+  "robot_radius_m": 0.2,
+  "control_dt_s": 0.1,
+  "physics_substeps": 10,
+  "horizon_steps": 600,
+  "linear_velocity_limits_m_s": [0.0, 1.0],
+  "angular_velocity_limits_rad_s": [-2.0, 2.0],
+  "goal_tolerance_m": 0.3,
+  "arrival_max_speed_m_s": 0.1,
+  "arrival_dwell_steps": 5,
+  "arrival_tie_tolerance_s": 0.1,
+  "contact_tolerance_m": 0.000001,
+  "range_sensor": {"rays": 24, "field_of_view_rad": 6.283185307179586, "max_range_m": 5.0},
+  "observation": {
+    "dimension": 44,
+    "ego": ["goal_distance_over_arena_diagonal", "sin_goal_bearing", "cos_goal_bearing", "linear_speed_over_limit", "angular_speed_over_limit"],
+    "ranges": "24 evenly spaced body-frame rays, starting forward, counterclockwise; range/max_range; nearest wall, static obstacle or peer surface",
+    "peers": "3 nearest peers sorted by distance then robot index; each slot: body-frame relative x/5, y/5, vx/2, vy/2, presence; pad absent slots with zeros",
+    "normalization": "fixed physical scales above; do not fit on validation/test; document any additional train-only normalization"
+  },
+  "courses": ["open", "slalom", "bottleneck", "crossing"],
+  "splits": {
+    "train": {"layouts": 200, "seed_start": 10000},
+    "validation": {"layouts": 40, "seed_start": 20000},
+    "test": {"layouts": 100, "seed_start": 30000, "episodes_per_course": 25}
+  },
+  "training_seeds": [0, 1, 2],
+  "deadlock": {"window_steps": 100, "minimum_team_distance_reduction_m": 0.1, "terminate_early": false},
+  "collision_rule": "first static/wall/peer contact terminates team episode; simultaneous update and per-substep collision checks required",
+  "goal_rule": "finished robots stop and remain obstacles; success requires all robots arrived without collision; horizon is truncation",
+  "selection": "team success first; differences below 5 percentage points are practically tied subject to uncertainty; then capped completion, inference cost, training cost",
+  "engineering_target": {"minimum_team_success_fraction": 0.8, "course_requirement": false},
+  "compute_budget": {
+    "device": "cpu",
+    "torch_threads": 4,
+    "pilot_minutes": 15,
+    "total_training_and_tuning_wall_hours": 12,
+    "bc_max_epochs": 50,
+    "ppo_max_world_steps_per_seed": 1000000,
+    "max_tuning_configurations_per_learned_method": 3,
+    "policy": "stop at first sample/epoch or total wall limit; include demonstrations and tuning; reduce scope and disclose if needed"
+  }
+}

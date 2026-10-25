@@ -1,0 +1,17 @@
+{
+  "train": {
+    "layouts": 200,
+    "sha256": "18a9e86cece5982440237d55eee8eba35446e586c273b5bc8cd60a9b515d9d73",
+    "individual_static_feasibility": true
+  },
+  "validation": {
+    "layouts": 40,
+    "sha256": "a50f6f126a54a611bae1026e5cb1fd12a0c42aff111b47de0d9f89acd57828a2",
+    "individual_static_feasibility": true
+  },
+  "test": {
+    "layouts": 100,
+    "sha256": "36aee2fe48c7489a450afddfe681c816ee8f0e0ae579500ccadb024a0ac2057b",
+    "individual_static_feasibility": true
+  }
+}

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roborace"
+version = "0.1.0"
+description = "Deterministic 2D multi-robot race benchmark"
+requires-python = ">=3.11"
+dependencies = ["numpy==2.2.6", "Pillow==11.1.0"]
+
+[tool.setuptools.packages.find]
+include = ["roborace*"]

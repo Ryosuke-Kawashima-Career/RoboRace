@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "kinematic/reset/render and synthetic neural-network training/save-load only; not G1 or task-performance evidence",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "versions": {
+    "numpy": "2.2.6",
+    "torch": "2.9.1+cpu",
+    "pillow": "11.1.0"
+  },
+  "cuda_available": false,
+  "torch_threads": 4,
+  "contract_sha256": "2ac2556d4c7ea09e787088bf6896256a005379ea6b58240a19857dc2367adaca",
+  "kinematic_world_steps": 10000,
+  "kinematic_wall_s": 0.9094859000761062,
+  "kinematic_world_steps_per_s": 10995.222684775206,
+  "synthetic_train_updates": 200,
+  "synthetic_train_wall_s": 0.2384181999368593,
+  "synthetic_initial_loss": 0.03563307598233223,
+  "synthetic_final_loss": 1.5979614545358345e-05,
+  "deterministic_reset_replay": true,
+  "weight_reload_exact": true,
+  "limitations": [
+    "No collision geometry, sensors, reward, task controller or MP4 tested",
+    "Kinematic throughput is not full-environment/PPO throughput",
+    "Project venv inherits installed base packages and is not portable"
+  ]
+}

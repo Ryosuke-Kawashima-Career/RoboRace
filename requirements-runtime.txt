@@ -1,0 +1,4 @@
+# G1 runtime has no additional transitive dependencies.
+# These exact versions were exercised on Python 3.13.5, Windows x64.
+numpy==2.2.6
+Pillow==11.1.0

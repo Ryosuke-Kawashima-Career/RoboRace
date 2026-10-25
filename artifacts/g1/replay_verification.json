@@ -1,0 +1,16 @@
+{
+  "demo_open_final": {
+    "exact_replay": true,
+    "provenance": true,
+    "team_success": true
+  },
+  "demo_crossing": {
+    "exact_replay": true,
+    "provenance": true,
+    "team_success": true
+  },
+  "manifests": {
+    "checksums_match": true,
+    "unique_seeds": 340
+  }
+}

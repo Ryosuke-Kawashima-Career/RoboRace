@@ -1,0 +1,35 @@
+{
+  "demo_open_final": {
+    "frames": 53,
+    "duration_ms": 10600,
+    "size": [
+      640,
+      720
+    ]
+  },
+  "demo_crossing": {
+    "frames": 62,
+    "duration_ms": 12400,
+    "size": [
+      640,
+      720
+    ]
+  },
+  "demo_slalom_safety_filter": {
+    "frames": 301,
+    "duration_ms": 60200,
+    "size": [
+      640,
+      720
+    ]
+  },
+  "validation": {
+    "split": "validation",
+    "episodes": 8,
+    "successes": 3,
+    "collision_episodes": 0,
+    "timeouts": 5,
+    "note": "G1 integration sample, not frozen held-out method comparison",
+    "mean_capped_completion_s": 41.625
+  }
+}

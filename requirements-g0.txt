@@ -1,0 +1,5 @@
+# Observed working versions, not a transitive portable lock.
+# torch is the installed CPU build; select its compatible wheel on fresh setup.
+numpy==2.2.6
+torch==2.9.1+cpu
+Pillow==11.1.0

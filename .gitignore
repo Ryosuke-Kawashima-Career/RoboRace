@@ -1,0 +1,6 @@
+docs/
+dev/
+.venv/
+__pycache__/
+*.py[cod]
+artifacts/g0/smoke_weights.pt
